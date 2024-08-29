@@ -1,8 +1,10 @@
 require_relative "linked_list"
 require_relative "node"
 
-test1 = LinkedList.new
-test2 = Node.new
+list = LinkedList.new
 
-puts test1
-puts test2
+list.append("dog")
+list.append("cat")
+list.append("parrot")
+puts list
+puts list.size
