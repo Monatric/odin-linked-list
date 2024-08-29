@@ -76,6 +76,17 @@ class LinkedList
     end
   end
 
+  def find(value)
+    temp = @head
+    i = 0
+    until temp.nil?
+      return i if temp.value == value
+
+      i += 1
+      temp = temp.next_node
+    end
+  end
+
   def to_s
     temp = @head
     until temp.nil?

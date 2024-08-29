@@ -11,6 +11,7 @@ puts list
 # puts list.head
 # p list.head.value
 # puts list.pop
+p list.find("cat")
 list.pop
 p list.contains?("dog")
 puts list
