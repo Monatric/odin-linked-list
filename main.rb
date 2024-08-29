@@ -12,5 +12,7 @@ puts list
 # p list.head.value
 # puts list.pop
 list.pop
+p list.contains?("dog")
 puts list
+
 # p list.at(4)

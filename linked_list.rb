@@ -67,6 +67,15 @@ class LinkedList
     p cur.value
   end
 
+  def contains?(value)
+    temp = @head
+    until temp.nil?
+      return true if temp.value == value
+
+      temp = temp.next_node
+    end
+  end
+
   def to_s
     temp = @head
     until temp.nil?
