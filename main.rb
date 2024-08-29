@@ -8,3 +8,4 @@ list.append("cat")
 list.append("parrot")
 puts list
 puts list.size
+puts list.head
