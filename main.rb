@@ -12,7 +12,7 @@ list.append("turtle")
 
 # puts list
 # puts list.size
-
+puts "head is #{list.head}"
 # puts list.pop
 # p list.find("cat")
 # list.pop

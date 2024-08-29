@@ -34,9 +34,9 @@ class LinkedList
     counter
   end
 
-  # def head
-  #   @head.value
-  # end
+  def head
+    @head.value
+  end
 
   def at(index)
     temp = @head
