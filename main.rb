@@ -9,3 +9,4 @@ list.prepend("cat")
 puts list
 puts list.size
 puts list.head
+p list.at(4)

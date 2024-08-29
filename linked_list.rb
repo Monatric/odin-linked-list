@@ -38,6 +38,20 @@ class LinkedList
     @head.value
   end
 
+  def at(index)
+    temp = @head
+    i = 0
+    until temp.nil?
+      return temp.value if index == i
+
+      return nil if temp.nil?
+
+      temp = temp.next_node
+
+      i += 1
+    end
+  end
+
   def to_s
     "( #{@head.value} ) and #{@tail}"
   end
