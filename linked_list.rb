@@ -53,8 +53,8 @@ class LinkedList
   end
 
   def pop
-    "Canoot delete" if head.value.nil?
-    self.head = nil if tail.value.nil?
+    return "Canoot delete" if head.value.nil?
+    return self.head = nil if head.next_node.nil?
 
     cur = @head
     prev = nil
@@ -90,10 +90,9 @@ class LinkedList
   def to_s
     temp = @head
     until temp.nil?
-      return print " ( nil )" if temp.nil?
-
       print "( #{temp.value} ) -> "
 
+      puts "nil" if temp.next_node.nil?
       temp = temp.next_node
     end
   end
