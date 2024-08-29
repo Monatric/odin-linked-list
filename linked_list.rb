@@ -16,7 +16,7 @@ class LinkedList
       temp = @head
       temp = temp.next_node until temp.next_node.nil?
       temp.next_node = Node.new(value)
-      self.tail = Node.new(value)
+      self.tail = temp.next_node
     end
   end
 
@@ -63,7 +63,7 @@ class LinkedList
       prev = cur
       cur  = cur.next_node
     end
-    prev.next_node = cur.next_node
+    prev.next_node = nil
     p cur.value
   end
 
@@ -71,6 +71,7 @@ class LinkedList
     temp = @head
     until temp.nil?
       return true if temp.value == value
+      return false if temp.next_node.nil?
 
       temp = temp.next_node
     end
@@ -89,11 +90,12 @@ class LinkedList
 
   def to_s
     temp = @head
+    string = ""
     until temp.nil?
-      print "( #{temp.value} ) -> "
-
-      puts "nil" if temp.next_node.nil?
+      string << "( #{temp.value} ) -> "
+      string << "nil" if temp.next_node.nil?
       temp = temp.next_node
     end
+    string
   end
 end

@@ -15,8 +15,8 @@ puts list
 # list.size
 # list.pop
 # list.find("cat")
-# list.contains?("dog")
-# list.at(4)
+# p list.contains?("test")
+# p list.at(10)
 # list.head.value
 # list.tail.value
 # list.prepend("shark")
