@@ -7,6 +7,10 @@ list.append("parrot")
 list.append("dog")
 list.prepend("cat")
 puts list
-puts list.size
-puts list.head
-p list.at(4)
+# puts list.size
+# puts list.head
+# p list.head.value
+# puts list.pop
+list.pop
+puts list
+# p list.at(4)

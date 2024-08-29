@@ -16,7 +16,7 @@ class LinkedList
       temp = @head
       temp = temp.next_node until temp.next_node.nil?
       temp.next_node = Node.new(value)
-      @tail = value
+      self.tail = Node.new(value)
     end
   end
 
@@ -34,9 +34,9 @@ class LinkedList
     counter
   end
 
-  def head
-    @head.value
-  end
+  # def head
+  #   @head.value
+  # end
 
   def at(index)
     temp = @head
@@ -52,7 +52,29 @@ class LinkedList
     end
   end
 
+  def pop
+    "Canoot delete" if head.value.nil?
+    self.head = nil if tail.value.nil?
+
+    cur = @head
+    prev = nil
+
+    until cur.next_node.nil?
+      prev = cur
+      cur  = cur.next_node
+    end
+    prev.next_node = cur.next_node
+    p cur.value
+  end
+
   def to_s
-    "( #{@head.value} ) and #{@tail}"
+    temp = @head
+    until temp.nil?
+      return print " ( nil )" if temp.nil?
+
+      print "( #{temp.value} ) -> "
+
+      temp = temp.next_node
+    end
   end
 end
