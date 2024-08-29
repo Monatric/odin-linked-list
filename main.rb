@@ -3,9 +3,9 @@ require_relative "node"
 
 list = LinkedList.new
 
-list.append("dog")
-list.append("cat")
 list.append("parrot")
+list.append("dog")
+list.prepend("cat")
 puts list
 puts list.size
 puts list.head

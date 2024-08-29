@@ -16,6 +16,7 @@ class LinkedList
       temp = @head
       temp = temp.next_node until temp.next_node.nil?
       temp.next_node = Node.new(value)
+      @tail = value
     end
   end
 
