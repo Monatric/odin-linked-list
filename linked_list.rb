@@ -34,9 +34,9 @@ class LinkedList
     counter
   end
 
-  def head
-    @head.value
-  end
+  # def head
+  #   @head.value
+  # end
 
   def at(index)
     temp = @head
@@ -53,8 +53,8 @@ class LinkedList
   end
 
   def pop
-    return "Canoot delete" if head.value.nil?
-    return self.head = nil if head.next_node.nil?
+    return "Canoot delete" if head.nil?
+    return self.head = nil if @head.next_node.nil?
 
     cur = @head
     prev = nil

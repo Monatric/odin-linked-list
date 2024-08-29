@@ -10,18 +10,13 @@ list.append("hamster")
 list.append("snake")
 list.append("turtle")
 
-# puts list
-# puts list.size
-puts "head is #{list.head}"
-# puts list.pop
-# p list.find("cat")
-# list.pop
-# p list.contains?("dog")
-# puts list
-# list.pop
 puts list
 
-# p list.at(4)
-# puts "  asdasd "
-# puts list.head
-# p list.head
+# list.size
+# list.pop
+# list.find("cat")
+# list.contains?("dog")
+# list.at(4)
+# list.head.value
+# list.tail.value
+# list.prepend("shark")
